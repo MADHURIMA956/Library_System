@@ -9,7 +9,7 @@ const router = express.Router();
 //USER CRUD
 
 router.post('' , crudController.post(CheckOut));
-router.get('', crudController.getWithTwoPopulate(CheckOut , 
+router.get('', crudController.getAllWithTwoPopulate(CheckOut , 
     { path : 'user_id' , select : 'first_name'},
     {path : 'book_id' , select : 'book_name'}
     ));

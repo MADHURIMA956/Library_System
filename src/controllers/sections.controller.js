@@ -10,8 +10,8 @@ const router = express.Router();
 
 router.post('' , crudController.post(Section));
 router.get('', crudController.getAll(Section));
-router.get('', crudController.getOne(Section));
-router.patch('', crudController.updateOne(Section));
-router.delete('', crudController.deleteOne(Section));
+router.get('/:id', crudController.getOne(Section));
+router.patch('/:id', crudController.updateOne(Section));
+router.delete('/:id', crudController.deleteOne(Section));
 
 module.exports = router;
